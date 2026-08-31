@@ -1,0 +1,57 @@
+@import url("students.css");
+
+.settings-card{
+
+background:white;
+
+padding:30px;
+
+margin-bottom:30px;
+
+border-radius:15px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+.settings-card h2{
+
+margin-bottom:20px;
+
+}
+
+.settings-card input{
+
+width:100%;
+
+padding:12px;
+
+margin-bottom:15px;
+
+border:1px solid #ddd;
+
+border-radius:8px;
+
+}
+
+.settings-card button{
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+}
+
+.settings-card button:hover{
+
+background:#1d4ed8;
+
+}

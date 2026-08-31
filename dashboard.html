@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance Management Dashboard</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-user-check"></i>
+
+        <h2>AttendanceMS</h2>
+
+    </div>
+
+    <ul>
+
+        <li class="active" onclick="dashboardPage()">
+            <i class="fa-solid fa-house"></i>
+            Dashboard
+        </li>
+
+        <li onclick="studentPage()">
+            <i class="fa-solid fa-users"></i>
+            Students
+        </li>
+
+        <li onclick="teacherPage()">
+            <i class="fa-solid fa-user-tie"></i>
+            Teachers
+        </li>
+
+        <li onclick="attendancePage()">
+            <i class="fa-solid fa-calendar-check"></i>
+            Attendance
+        </li>
+
+        <li onclick="reportPage()">
+            <i class="fa-solid fa-chart-column"></i>
+            Reports
+        </li>
+
+        <li onclick="settingPage()">
+            <i class="fa-solid fa-gear"></i>
+            Settings
+        </li>
+
+        <li onclick="logoutPage()">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Logout
+        </li>
+
+    </ul>
+
+</aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Dashboard</h1>
+
+                <p>Welcome back, Admin 👋</p>
+
+            </div>
+
+            <div class="top-right">
+
+    <button class="dark-btn" onclick="toggleDarkMode()">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <div class="notification-wrapper">
+
+        <i class="fa-solid fa-bell notification-icon"
+           onclick="toggleNotification()"></i>
+
+        <span class="notification-count">3</span>
+
+        <div class="notification-panel" id="notificationPanel">
+
+            <h3>Notifications</h3>
+
+            <div class="notification-item">
+                <p>New student registered</p>
+                <small>2 minutes ago</small>
+            </div>
+
+            <div class="notification-item">
+                <p>Attendance submitted successfully</p>
+                <small>10 minutes ago</small>
+            </div>
+
+            <div class="notification-item">
+                <p>Monthly report generated</p>
+                <small>1 hour ago</small>
+            </div>
+
+        </div>
+
+    </div>
+
+    <img src="images/admin.jpg" alt="Admin">
+
+</div>
+
+        </header>
+
+        <!-- Dashboard Cards -->
+
+        <section class="cards">
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-graduate"></i>
+
+                <h2>2500</h2>
+
+                <p>Total Students</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-chalkboard-user"></i>
+
+                <h2>120</h2>
+
+                <p>Total Teachers</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <h2>2300</h2>
+
+                <p>Present Today</p>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-circle-xmark"></i>
+
+                <h2>200</h2>
+
+                <p>Absent Today</p>
+
+            </div>
+
+        </section>
+
+        <!-- Chart -->
+
+        <section class="chart">
+
+            <h2>Attendance Analytics</h2>
+
+            <img src="images/dashboard-banner.png" alt="Chart">
+
+        </section>
+
+        <!-- Attendance Table -->
+
+        <section class="table-section">
+
+            <h2>Today's Attendance</h2>
+
+            <table>
+
+                <tr>
+
+                    <th>Roll No</th>
+
+                    <th>Name</th>
+
+                    <th>Class</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+                <tr>
+
+                    <td>101</td>
+
+                    <td>Rahul Sharma</td>
+
+                    <td>BCA</td>
+
+                    <td class="present">Present</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>102</td>
+
+                    <td>Priya Patel</td>
+
+                    <td>BCA</td>
+
+                    <td class="absent">Absent</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>103</td>
+
+                    <td>Amit Verma</td>
+
+                    <td>BCA</td>
+
+                    <td class="present">Present</td>
+
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/dashboard.js"></script>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+<button onclick="studentPage()">Students</button>
+
+<button onclick="teacherPage()">Teachers</button>
+
+<button onclick="logoutPage()">Logout</button>

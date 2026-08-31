@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance Management</title>
+
+    <link rel="stylesheet" href="css/attendance.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>AttendanceMS</h2>
+
+        </div>
+
+        <ul>
+
+            <li onclick="dashboardPage()">
+
+                <i class="fa-solid fa-house"></i>
+
+                Dashboard
+
+            </li>
+
+            <li onclick="studentPage()">
+
+                <i class="fa-solid fa-users"></i>
+
+                Students
+
+            </li>
+
+            <li onclick="teacherPage()">
+
+                <i class="fa-solid fa-user-tie"></i>
+
+                Teachers
+
+            </li>
+
+            <li class="active">
+
+                <i class="fa-solid fa-calendar-check"></i>
+
+                Attendance
+
+            </li>
+
+            <li onclick="reportPage()">
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                Reports
+
+            </li>
+
+            <li onclick="settingPage()">
+
+                <i class="fa-solid fa-gear"></i>
+
+                Settings
+
+            </li>
+
+            <li onclick="logoutPage()">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <h1>Attendance Management</h1>
+
+        <div class="top-actions">
+
+    <input type="date" id="attendanceDate">
+
+    <button onclick="markAllPresent()">
+        ✔ Mark All Present
+    </button>
+
+    <button onclick="markAllAbsent()">
+        ✖ Mark All Absent
+    </button>
+
+    <button onclick="saveAttendance()">
+
+        <i class="fa-solid fa-floppy-disk"></i>
+
+        Save Attendance
+
+    </button>
+
+</div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Student Name</th>
+
+                    <th>Course</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="attendanceTable">
+
+                <tr>
+
+                    <td>1</td>
+
+                    <td>Rahul Sharma</td>
+
+                    <td>BCA</td>
+
+                    <td>
+
+                        <select class="attendanceStatus">
+
+                            <option>Present</option>
+
+                            <option>Absent</option>
+
+                        </select>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+
+                    <td>Priya Patel</td>
+
+                    <td>BSc</td>
+
+                    <td>
+
+                        <select class="attendanceStatus">
+
+                            <option>Present</option>
+
+                            <option>Absent</option>
+
+                        </select>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+        <div class="attendance-summary">
+
+    <div class="summary-card">
+
+        <h3>Present</h3>
+
+        <h2 id="presentCount">0</h2>
+
+    </div>
+
+    <div class="summary-card">
+
+        <h3>Absent</h3>
+
+        <h2 id="absentCount">0</h2>
+
+    </div>
+
+    <div class="summary-card">
+
+        <h3>Attendance %</h3>
+
+        <h2 id="attendancePercentage">0%</h2>
+
+    </div>
+
+</div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teacher Management</title>
+
+    <link rel="stylesheet" href="css/teachers.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>AttendanceMS</h2>
+
+        </div>
+
+        <ul>
+
+            <li onclick="dashboardPage()">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li onclick="studentPage()">
+                <i class="fa-solid fa-users"></i>
+                Students
+            </li>
+
+            <li class="active">
+                <i class="fa-solid fa-user-tie"></i>
+                Teachers
+            </li>
+
+            <li onclick="attendancePage()">
+                <i class="fa-solid fa-calendar-check"></i>
+                Attendance
+            </li>
+
+            <li onclick="reportPage()">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </li>
+
+            <li onclick="settingPage()">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </li>
+
+            <li onclick="logoutPage()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <h1>Teacher Management</h1>
+
+        <div class="top-actions">
+
+            <input
+                type="text"
+                placeholder="Search Teacher">
+
+           <button onclick="openTeacherForm()">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Teacher
+
+</button>
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Name</th>
+
+                    <th>Email</th>
+
+                    <th>Subject</th>
+
+                    <th>Action</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="teacherTable">
+
+                <tr>
+
+                    <td>1</td>
+
+                    <td>Amit Kumar</td>
+
+                    <td>amit@gmail.com</td>
+
+                    <td>Java</td>
+
+                    <td>
+
+                       <button class="edit-btn"
+                         onclick="editTeacher(this)">
+                         Edit
+                       </button>
+
+                        <button class="delete-btn"
+                         onclick="deleteTeacher(this)">
+                         Delete
+                        </button>
+
+                    </td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+
+                    <td>Neha Sharma</td>
+
+                    <td>neha@gmail.com</td>
+
+                    <td>Database</td>
+
+                    <td>
+
+                        <button class="edit-btn"
+                         onclick="editTeacher(this)">
+                         Edit
+                        </button>
+
+                        <button class="delete-btn"
+                         onclick="deleteTeacher(this)">
+                         Delete
+                        </button>
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+
+<!-- Teacher Popup -->
+
+<div class="popup" id="teacherPopup">
+
+    <div class="popup-content">
+
+        <h2>Add Teacher</h2>
+
+        <input type="text" id="teacherName" placeholder="Teacher Name">
+
+        <input type="email" id="teacherEmail" placeholder="Email">
+
+        <input type="text" id="teacherSubject" placeholder="Subject">
+
+        <input type="text" id="teacherPhone" placeholder="Phone Number">
+
+        <div class="popup-buttons">
+
+            <button class="save-btn" onclick="saveTeacher()">
+
+                Save
+
+            </button>
+
+            <button class="cancel-btn" onclick="closeTeacherForm()">
+
+                Cancel
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

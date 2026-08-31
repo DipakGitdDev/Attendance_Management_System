@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Attendance Reports</title>
+
+    <link rel="stylesheet" href="css/reports.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <h2>AttendanceMS</h2>
+
+        </div>
+
+        <ul>
+
+            <li onclick="dashboardPage()">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li onclick="studentPage()">
+                <i class="fa-solid fa-users"></i>
+                Students
+            </li>
+
+            <li onclick="teacherPage()">
+                <i class="fa-solid fa-user-tie"></i>
+                Teachers
+            </li>
+
+            <li onclick="attendancePage()">
+                <i class="fa-solid fa-calendar-check"></i>
+                Attendance
+            </li>
+
+            <li class="active">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </li>
+
+            <li onclick="settingPage()">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </li>
+
+            <li onclick="logoutPage()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                Logout
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <div class="main-content">
+
+        <h1>Attendance Reports</h1>
+
+        <div class="top-actions">
+
+            <input type="date" id="fromDate">
+
+            <input type="date" id="toDate">
+
+            <button onclick="generateReport()">
+
+                <i class="fa-solid fa-filter"></i>
+
+                Generate Report
+
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+                    <th>Student</th>
+                    <th>Course</th>
+                    <th>Total Present</th>
+                    <th>Total Absent</th>
+                    <th>Attendance %</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="reportTable">
+
+                <tr>
+
+                    <td>1</td>
+
+                    <td>Rahul Sharma</td>
+
+                    <td>BCA</td>
+
+                    <td>28</td>
+
+                    <td>2</td>
+
+                    <td>93%</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2</td>
+
+                    <td>Priya Patel</td>
+
+                    <td>BSc</td>
+
+                    <td>26</td>
+
+                    <td>4</td>
+
+                    <td>87%</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
